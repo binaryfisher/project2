@@ -96,7 +96,7 @@ def load_training_data(path_to_train_data):
 def process_test_data(video_locations):
     test_count = 0
     for video_location in video_locations:
-        with open('results.csv', 'w', newline='') as results_file:
+        with open('Results.csv', 'w', newline='') as results_file:
             fieldnames = ['Gesture_Name', 'Output_Label']
             data_writer = csv.DictWriter(results_file, fieldnames=fieldnames)
             # data_writer.writeheader()
