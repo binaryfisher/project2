@@ -97,7 +97,7 @@ def process_test_data(video_locations):
     test_count = 0
     for video_location in video_locations:
         with open('Results.csv', 'w', newline='') as results_file:
-            fieldnames = ['Gesture_Name', 'Output_Label']
+            fieldnames = ['Output_Label']
             data_writer = csv.DictWriter(results_file, fieldnames=fieldnames)
             # data_writer.writeheader()
 
@@ -107,7 +107,6 @@ def process_test_data(video_locations):
                     test_count += 1
 
                     data_writer.writerow({
-                                          'Gesture_Name': recognized_gesture_detail.gesture_name,
                                           'Output_Label': recognized_gesture_detail.output_label})
 
 if __name__ == "__main__":
